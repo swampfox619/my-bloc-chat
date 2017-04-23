@@ -1,0 +1,13 @@
+<div ng-controller="ModalCtrl as $ctrl" class="modal-demo">
+   <form>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-title">Enter a User Name</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <input type="text" ng-model="newUserName" ng-required="required">
+        </div>
+        <div class="modal-footer">
+            <input class="btn btn-primary" type="submit" value="Okay" ng-click="createNewUser(newUserName)">
+        </div>
+    </form>
+</div>

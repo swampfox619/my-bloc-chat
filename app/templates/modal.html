@@ -1,0 +1,15 @@
+<div ng-controller="ModalCtrl as $ctrl" class="modal-demo">
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Create a New Room</h2>
+    </div>
+    <form ng-submit="add(name)">
+        <div class="modal-body" id="modal-body">
+            <h4>Enter a Room Name:</h4>
+            <input type="text" ng-model="name">
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="ok()">Submit</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </form>
+</div>
