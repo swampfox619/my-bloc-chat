@@ -21,12 +21,31 @@ main li{
     list-style: none;
 }
 
+main h4{
+    font-style: italic;
+}
 .chat-area {
     padding: 15px;
 }
 
 .chat-header {
     border-bottom: 2px solid black;
+}
+
+.list:nth-child(odd) {
+    background-color: gainsboro;
+    padding-left: 0;
+    margin: 0;
+}
+.col-sm-3 {
+    padding-right: 0;
+}
+
+.nopadding {
+    padding-left: 0;
+}
+.list {
+    padding-left: 0;
 }
 aside {
     background-color: #DDDDDD;
@@ -46,8 +65,12 @@ aside ul {
     padding: 0;
 }
 
-aside li {
-    color: #444444;
+aside li{
+    padding-bottom: 10px;
+}
+
+.navigation {
+    color: black;
     list-style: none;
     padding-bottom: 20px;
     font-size: 20px;

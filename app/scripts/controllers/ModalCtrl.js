@@ -15,7 +15,7 @@
         if(typeof this.newUserName !== "undefined"){
             $scope.userModalInstance.close();
             }
-        };
+        };   
     }
     
     angular

@@ -7,24 +7,28 @@
                     <button class="btn btn-primary" ng-click="open()">Create a New Room</button>
                 </div>
                 <ul>
-                    <li ng-repeat="room in rooms"><a href ng-click="setRoom(room)">{{room.$value}}</a></li>
+                    <li ng-repeat="room in rooms"><a class="navigation" href ng-click="setRoom(room)">{{room.$value}}</a></li>
                 </ul>
             </aside>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9 ">
             <main>
                 <h1 class="chat-header">{{currentRoom.$value}}</h1>
-                <ul ng-repeat="message in messages" class="container">
-                    <li class="row" style="border-bottom: 1px solid black;">
+                <ul ng-repeat="message in messages" class="container list">
+                    <li class="row">
                         <div class="col-sm-9">
-                            <h5>{{message.username}}</h5>
-                            <p>{{message.content}}</p>
+                            <h3 style="margin-left: 10px; padding-top: 0">{{message.content}}</h3>
+                            <h4 style="margin-left: 20px">{{message.username}}</h4>
                         </div>
                         <div class="col-sm-3">
-                            <h6>{{message.sentAt}}</h6>
+                            <h6>{{message.sentAt | date: 'medium'}}</h6>
                         </div>
                     </li>
                 </ul>
+            <form style="padding-top: 15px; border-top: 2px solid black;">
+                <input type="text" size="100" name="input" placeholder="Write your message here..." ng-model="newMessage.content" ng-required="required">
+                <button class="btn btn-primary" type="button" ng-click="sendNewMessages()">Send</button>
+            </form>
             </main>
         </div>
     </div>
